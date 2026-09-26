@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  }
+
+  body {
+    font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', 'Pretendard', monospace;
+    font-feature-settings: "tnum" 1;
+  }
+}
+
+/* Pure Spectrum Bar Color Gradient (The ONLY colored element on the heat balance page) */
+.temp-bar-gradient {
+  background: linear-gradient(to right, 
+    #1e40af 0%,    /* Cold Blue */
+    #3b82f6 25%,   /* Mild Cool */
+    #f8fafc 50%,   /* Neutral White Core */
+    #f97316 75%,   /* Warm Orange */
+    #dc2626 100%   /* Extreme Red */
+  );
+}
+
+/* Technical grid patterns for diagram backgrounds */
+.bg-tech-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+}
+
+.bg-tech-dots {
+  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+}
+
+/* Custom sleek dark scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0c0c0c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b3b3b;
+}
+
+/* SVG Animations for Passive Conditioning */
+.airflow-path {
+  stroke-dasharray: 6, 4;
+  animation: dash 1.5s linear infinite;
+}
+
+@keyframes dash {
+  to { stroke-dashoffset: -20; }
+}
+
+.heat-wave {
+  animation: wave 2s ease-in-out infinite alternate;
+}
+
+@keyframes wave {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-3px); }
+}
+
+/* Animations for Occupant Intervention (Slide 6) */
+@keyframes heatPulse {
+  0%, 100% { opacity: 0.4; transform: scale(0.98); }
+  50% { opacity: 1.0; transform: scale(1.04); }
+}
+.heat-wave-active {
+  animation: heatPulse 1.6s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes rayGlow {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+.solar-ray {
+  animation: rayGlow 1.8s ease-in-out infinite;
+}
+
+/* Animations for AI Thermal Environment Design (Slide 6) */
+@keyframes windFlowPath {
+  0% { stroke-dashoffset: 60; }
+  100% { stroke-dashoffset: 0; }
+}
+.animated-wind-stream {
+  stroke-dasharray: 10 5;
+  animation: windFlowPath 1.5s linear infinite;
+}
+
+@keyframes heatPulse {
+  0%, 100% { opacity: 0.25; transform: scale(0.97); }
+  50% { opacity: 0.65; transform: scale(1.03); }
+}
+.heat-particle {
+  animation: heatPulse 2s ease-in-out infinite;
+  transform-origin: center;
+}
+
+
+
+

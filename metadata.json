@@ -1,0 +1,6 @@
+{
+  "name": "Monochrome Diagram Deck",
+  "description": "Minimalist monochrome slide presentation platform with horizontal diagram transitions and modular slide architecture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
